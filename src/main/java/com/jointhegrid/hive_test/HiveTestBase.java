@@ -68,20 +68,4 @@ public abstract class HiveTestBase extends HadoopTestCase {
     return dir;
   }
 
-  public void setUp() throws Exception {
-    super.setUp();
-
-    String jarFile = org.apache.hadoop.hive.ql.exec.MapRedTask.class.getProtectionDomain().getCodeSource().getLocation().getFile();
-    System.setProperty(HiveConf.ConfVars.HIVEJAR.toString(), jarFile);
-
-    Path rootDir = getDir(ROOT_DIR);
-    Configuration conf = createJobConf();
-    FileSystem fs = FileSystem.get(conf);
-    fs.delete(rootDir, true);
-    Path metastorePath = new Path("/tmp/metastore_db");
-    fs.delete(metastorePath, true);
-    Path warehouse = new Path("/tmp/warehouse");
-    fs.delete(warehouse, true);
-    fs.mkdirs(warehouse);
-  }
 }

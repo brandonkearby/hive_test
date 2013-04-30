@@ -23,7 +23,7 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.Path;
 import org.junit.Assert;
 
-public class ServiceExampleTest extends HiveTestService {
+public class ServiceExampleTest extends com.jointhegrid.hive_test.HiveTestService {
 
   public ServiceExampleTest() throws IOException {
     super();

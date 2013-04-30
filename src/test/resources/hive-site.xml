@@ -14,7 +14,7 @@
 
 <property>
   <name>javax.jdo.option.ConnectionURL</name>
-  <!--<value>jdbc:derby:;databaseName=/tmp/metastore_db;create=true</value>-->
+  <value>jdbc:derby:;databaseName=/tmp/metastore_db;create=true</value>
   <value>jdbc:derby:memory:metastore_db;create=true</value>
   <description>JDBC connect string for a JDBC metastore</description>
 </property>
@@ -25,20 +25,23 @@
   <description>location of default database for the warehouse</description>
 </property>
 
-<!--
 <property>
-  <name>hive.jar.path</name>
-  <value>/home/edward/.m2/repository/org/apache/hive/hive-exec/0.7.1-SNAPSHOT/hive-exec-0.7.1-SNAPSHOT.jar</value>
-  <description>location of default database for the warehouse</description>
+  <name>hive.exec.dynamic.partition.mode</name>
+  <value>nonstrict</value>
+  <description>dynamic partitions</description>
 </property>
--->
 
-<!--
 <property>
-  <name>hive.metastore.local</name>
-  <value>true</value>
-  <description>controls whether to connect to remove metastore server or open a new metastore server in Hive Client JVM</description>
+  <name>hive.stats.autogather</name>
+  <value>false</value>
+  <description>Turn off stats</description>
 </property>
--->
+
+<property>
+  <name>mapred.job.tracker</name>
+  <value>local</value>
+  <description></description>
+</property>
+
 
 </configuration>
