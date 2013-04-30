@@ -223,7 +223,33 @@
       </plugins>
     </pluginManagement>
   </build>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>dachis.repository.releases</id>
+      <url>http://artifactory.dachisdev.com/libs-releases-local/</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>dachis.repository.snapshots</id>
+      <url>http://artifactory.dachisdev.com/libs-snapshots-local/</url>
+      <layout>default</layout>
+    </snapshotRepository>
+  </distributionManagement>
   <repositories>
+
+    <repository>
+      <id>internal</id>
+      <url>http://artifactory.dachisdev.com/internal-repos/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
     <repository>
       <id>riptano</id>
       <url>http://mvn.riptano.com/content/repositories/snapshots</url>
